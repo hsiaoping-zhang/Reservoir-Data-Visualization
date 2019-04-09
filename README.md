@@ -1,2 +1,5 @@
-# Reservoir_DataVisiualization
-歷年水庫資料視覺化
+# Reservoir Data Visiualization
+
+**歷年水庫資料視覺化**
+
+把歷年的水庫水位資料從網站上取得後，有別於政府開放資料只提供即時資料，利用這份 project 可以透過將資料視覺化的過程，檢示是否歷年來的水位變化更加劇烈，以及對比於平均值，現在的水情如何。  
