@@ -55,22 +55,27 @@ Use days to compute date points of every period.
 4. 單個水庫**整年**進水總量與出水總量的多圖(長條圖)呈現  
 
 #### Block 1 單日 sample 成果  
+[網頁呈現 website view - Plotly](https://swboezezb8hx4zw2kranbq-on.drv.tw/Reservoir/Bar%20Plot-1.html)
 ![image](https://github.com/hsiaoping-zhang/Reservoir_DataVisiualization/blob/master/example_graph%20%E5%9C%96%E8%A1%A8/bar_plot(a%20day).png)
 
 根據指定日期比較單日資料之間的差異(ex: 現在蓄水量 / 有效總蓄水量)
 
 #### Block 2 每 n 日 sample 成果  
+[網頁呈現 website view - Plotly](https://swboezezb8hx4zw2kranbq-on.drv.tw/Reservoir/Line%20Plot-1.html)
 ![image](https://github.com/hsiaoping-zhang/Reservoir_DataVisiualization/blob/master/example_graph%20%E5%9C%96%E8%A1%A8/line_plot(n%20days).png)
 曾文水庫多年的每 10 天平均蓄水量折線圖比較  
 
 #### Block 3 每個月 sample 成果  
+[網頁呈現 website view - Plotly](https://swboezezb8hx4zw2kranbq-on.drv.tw/Reservoir/Line%20Plot-2.html)
 ![image](https://github.com/hsiaoping-zhang/Reservoir_DataVisiualization/blob/master/example_graph%20%E5%9C%96%E8%A1%A8/line_plot(month).png)  
 多個水庫的平均月進水量折線圖**在同一張圖**比較  
 
 ##### 每個月的 subplot 圖成果  
+[網頁呈現 website view - Plotly](https://swboezezb8hx4zw2kranbq-on.drv.tw/Reservoir/SubPlot-1.html)
 ![image](https://github.com/hsiaoping-zhang/Reservoir_DataVisiualization/blob/master/example_graph%20%E5%9C%96%E8%A1%A8/subplots(month).png)  
 多個水庫的平均月進水量長條圖**多圖**比較  
 
 #### Block 4 每年 sample 成果  
+[網頁呈現 website view - Plotly](https://swboezezb8hx4zw2kranbq-on.drv.tw/Reservoir/Subplot-2.html)
 ![image](https://github.com/hsiaoping-zhang/Reservoir_DataVisiualization/blob/master/example_graph%20%E5%9C%96%E8%A1%A8/subplots(year).png)
 曾文水庫整年進水總量與出水總量的兩圖(長條圖)呈現  
