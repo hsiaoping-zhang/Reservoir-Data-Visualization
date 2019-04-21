@@ -1,5 +1,6 @@
 # 臺灣水庫歷年資料視覺化 Reservoir Data Visiualization
-[成果說明 PPT](https://drive.google.com/drive/folders/196guVduKk8WaOCXxMpmbkQN3FJhBzKoh?usp=sharing)
+[成果說明 PPT](https://drive.google.com/drive/folders/196guVduKk8WaOCXxMpmbkQN3FJhBzKoh?usp=sharing)  
+[Plotly 圖表呈現](https://swboezezb8hx4zw2kranbq-on.drv.tw/Website/reservoir_representation.html)  
 
 ## 網頁爬蟲  
 透過 `crawler_function.py` 和 `write_file.py` 兩個檔案，可以將水庫資料網站上的每天資料爬蟲下來，寫成 csv 檔，讓以後讀取資料較為方便。  
