@@ -1,6 +1,6 @@
 # 臺灣水庫歷年資料視覺化 Reservoir Data Visiualization
 
-## 資料爬蟲  
+## 網頁爬蟲  
 透過 `crawler_function.py` 和 `write_file.py` 兩個檔案，可以將水庫資料網站上的每天資料爬蟲下來，寫成 csv 檔，讓以後讀取資料較為方便。  
 > 主程式為 : `grab_data.py` ，更多詳細說明在 : [HaackMD筆記](https://hackmd.io/s/r14Ut5bFE)  
 
