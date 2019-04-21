@@ -120,6 +120,7 @@ def month_value(path, filename, year, reservoir, string):
         df.index = list(df["Unnamed: 0"])
 
         df[df == -999.9] = np.nan  # ignore wrong data
+        df[df == 0] = np.nan
 
         for num in range(len(reservoir)):  # scan for each reservoir
             days, count = 0, 0
@@ -138,7 +139,7 @@ def month_value(path, filename, year, reservoir, string):
                     data[num].append(value)
                 else:
                     if(value / 5 > data[num][count] and year.index(yr) > 3 and data[num][count] > 100):
-                        print(reservoir[num], ":", yr, "/", count, "|", value, " | ", data[num][count],  " | ", int(value / data[num][count]), " times")
+                        print(reservoir[num], ":", yr, "/", count + 1, "|", value, " | ", data[num][count],  " | ", int(value / data[num][count]), " times")
 
                     else:
                         data[num][count] += value
@@ -157,7 +158,7 @@ total or average waterflow of each year
 path(str): file folder
 filename(str): file name without year infomation(ex: "percentage-" or "In-Daily-")
 year(list[int]): list of assigned years
-reservoir(list[str]): list of reservoirs' name
+reservoir(str): list of reservoirs' name
 string(str): data type in finding files("percentage", "floating_point")
 '''
 def year_value(path, file, reservoir_name, year_list, compute, string):   
