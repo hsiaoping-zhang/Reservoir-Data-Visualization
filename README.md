@@ -1,14 +1,36 @@
 # 臺灣水庫歷年資料視覺化 Reservoir Data Visiualization
 
-## 歷年水庫資料爬蟲  
+## 資料爬蟲  
 透過 `crawler_function.py` 和 `write_file.py` 兩個檔案，可以將水庫資料網站上的每天資料爬蟲下來，寫成 csv 檔，讓以後讀取資料較為方便。  
-> 主程式為 : `grab_data.py` ，更多詳細說明在 : [HaackMD筆記](https://hackmd.io/s/r14Ut5bFE)
+> 主程式為 : `grab_data.py` ，更多詳細說明在 : [HaackMD筆記](https://hackmd.io/s/r14Ut5bFE)  
 
-## 歷年水庫資料視覺化  
-把歷年的水庫水位資料從網站上取得後，有別於政府開放資料只提供即時資料，利用這份 project 可以透過將資料視覺化的過程，顯示單個或多個水庫在一段期間當中的水位變化，以及是否擁有季節性的水位規律。
+
+### crawler_function.py  
+**FUNCTION :**
+- `find_value(name, web)`  
+Search for a certain value (ex: *__VIEWSTATE*)  
+在 web 內容裡找到特定的 value 值  
+
+- `table_data_management(table, reservoir_dict_list, total_reservoir, index)`  
+Manage DataFrame, get values from assigned columns, and return them.  
+處理DataFrame type的資料，並從 index list 當中獲得要存取的欄位，加到reservoir_dict_list當中 
+(由不同欄位資料的dictionary組成的list type)，並回傳。
+
+- `reservoir_data_search(date, reservoir_dict_list, total_reservoir, index)`  
+Get *__EVENTTARGET* 's and *__VIEWSTATE* 's value by using `find_value` function, and request to website using POST.  
+先用 GET 的方式存取到兩個參數的值，用 POST 方式放入參數向網頁抓取資料。  
+
+### write_file.py  
+**FUNCTION :**
+- `write_csv_file(reservoir_dict_list, length, date_index, year)`  
+Write DataFrame to csv file.  
+寫檔。  
+
+## 資料視覺化  
+把歷年的水庫水位資料從網站上取得後，有別於政府開放資料只提供即時資料，利用這份 project 可以透過將資料視覺化的過程，顯示單個或多個水庫在一段期間當中的水位變化，以及是否擁有季節性的水位規律。  
 
 ### fun_get_value.py
-內有取得單日、每 n 日、每月、每年的 function 定義，可供 main 程式碼呼叫。
+內有取得單日、每 n 日、每月、每年的 function 定義，可供 main 程式碼呼叫。  
 
 **FUNCTION :**
 - `a_day_value(path, file_name, date, reservoir, string)`  
