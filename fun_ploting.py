@@ -13,8 +13,8 @@ from fun_get_value import add_row_column
 Bar Graph 長條圖
 
 - parameter:
-x(list): list of x value
-y(list): list of y value
+x(list[list[float]]): list of list of x value
+y(list[list[float]]): list of list of y value
 name(list[str]): each data's name
 title(str): graph's title
 xaxis(str): name of x-axis
@@ -25,6 +25,7 @@ def bar_plot(x, y, name, title, xaxis, yaxis, file_name):
     data = []
     for i in range(len(name)):
         trace = go.Bar(x = x[i], y = y[i], name = name[i])
+        print(i)
         data.append(trace)
 
     layout = go.Layout(title = title, xaxis = dict(title = xaxis), yaxis = dict(title = yaxis))
@@ -36,8 +37,8 @@ def bar_plot(x, y, name, title, xaxis, yaxis, file_name):
 Line Graph 折線圖
 
 - parameter:
-x(list): list of x value
-y(list): list of y value
+x(list[list[float]]): list of list of x value
+y(list[list[float]]): list of list of y value
 name(list[str]): each data's name
 title(str): graph's title
 xaxis(str): name of x-axis
@@ -60,8 +61,8 @@ Subplots 多圖呈現(長條圖)
 根據送進來的資料，依照順序(由左到右、由上到下)輸出多圖，可供不同水庫間的資料比較。
 
 - parameter:
-x(list): list of x value
-y(list): list of y value
+x(list[list[float]]): list of list of x value
+y(list[list[float]]): list of list of y value
 name(list[str]): each data's name
 title(str): graph's title
 xaxis(list[str]): list of name of x-axis
